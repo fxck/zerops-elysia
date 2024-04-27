@@ -4,10 +4,10 @@ zerops:
       prepareCommands:
         - curl -fsSL https://bun.sh/install | bash
       buildCommands:
-        - /root/.bun/bin/bun install --production
+        - bun install --production
       deploy:
         - ./
     run:
       prepareCommands:
         - curl -fsSL https://bun.sh/install | bash
-      start: NODE_ENV=production /root/.bun/bin/bun src/index.ts
+      start: NODE_ENV=production bun src/index.ts
